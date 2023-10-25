@@ -1,0 +1,45 @@
+.result {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.password {
+  display: block;
+  width: 230px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(169, 167, 167, 0.99);
+}
+
+.fadeInOut {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fadeInOutShow {
+  opacity: 1;
+}
