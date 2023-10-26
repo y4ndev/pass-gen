@@ -38,6 +38,9 @@
 .fadeInOut {
   opacity: 0;
   transition: opacity 0.5s;
+  position: absolute;
+  top: 40px;
+  right: -10px;
 }
 
 .fadeInOutShow {

@@ -39,8 +39,13 @@
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   color: #fff;
   font-weight: 700;
+  position: relative;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:active {
+    top: 1px;
   }
 }

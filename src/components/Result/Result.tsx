@@ -6,21 +6,23 @@ import style from "./Result.module.scss";
 const Result: React.FC = () => {
   const [isTextVisible, setTextVisible] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard
-      .writeText(password)
-      .then(() => {
-        setTextVisible(!isTextVisible);
-        setTimeout(() => {
-          setTextVisible(false);
-        }, 500);
-      })
-      .catch((error) => {
-        console.error("Не удалось скопировать текст: ", error);
-      });
-  };
-
   const password = useAppSelector((state) => state.generate.password);
+
+  const handleCopy = () => {
+    if (password.length > 0) {
+      navigator.clipboard
+        .writeText(password)
+        .then(() => {
+          setTextVisible(!isTextVisible);
+          setTimeout(() => {
+            setTextVisible(false);
+          }, 500);
+        })
+        .catch((error) => {
+          console.error("Не удалось скопировать текст: ", error);
+        });
+    }
+  };
 
   return (
     <>
